@@ -13,3 +13,4 @@ Note: Edit the script and replace the [PARAMSPIDER_PATH] variable to where the P
 ```
 ./paramspider_script.sh domains.txt
 ```
+In the domains.txt, you can supply all the subdomains of a domain or mutiplle domains.
