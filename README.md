@@ -7,7 +7,12 @@ cd Mass-ParamSpider
 sudo chmod +x mass-param.txt
 ```
 
-Note: Edit the script and replace the [PARAMSPIDER_PATH] variable to where the ParamSpider script is located in your system. 
+Note: Add the `paramspider` and `httprobe` should be in the bin, for example:
+
+```
+$ cd ParamSpider
+$ sudo cp paramspider.py /usr/local/bin/
+```
 
 ## Usage:
 ```
