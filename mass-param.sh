@@ -4,7 +4,7 @@
 PARAMSPIDER_PATH="bbtools/ParamSpider/paramspider.py"
 
 # Input file containing the list of domains
-DOMAINS_FILE="domain_list.txt"
+DOMAINS_FILE="domains.txt"
 
 # Output file for storing the combined results
 OUTPUT_FILE="combined_output.txt"
