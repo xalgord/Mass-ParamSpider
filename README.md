@@ -1,4 +1,4 @@
-# Mass-ParamSpider: Run ParamSpider tool on multiple domains.
+# Mass-ParamSpider: Run ParamSpider tool on multiple domains or subdomains.
 
 ## Installation:
 ```
