@@ -7,7 +7,7 @@ cd Mass-ParamSpider
 sudo chmod +x mass-param.txt
 ```
 
-Note: Add the `paramspider` and `httprobe` should be in the bin, for example:
+Note: Add the `paramspider` and `httprobe` should be in the bin folder, for example:
 
 ```
 $ cd ParamSpider
