@@ -7,11 +7,10 @@ cd Mass-ParamSpider
 sudo chmod +x mass-param.txt
 ```
 
-Note: `paramspider.py` and `httprobe` should be in the bin folder, for example:
+Note: `paramspider` and `httprobe` should be in the bin folder, for example:
 
 ```
-$ cd ParamSpider
-$ sudo cp paramspider.py /usr/local/bin/
+$ sudo cp -r ParamSpider/* /usr/local/bin/
 ```
 
 ## Usage:
