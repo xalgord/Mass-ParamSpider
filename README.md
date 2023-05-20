@@ -13,7 +13,7 @@ Note: `paramspider` and `httprobe` should be added to the $PATH, for example:
 
 ```
 $ nano ~/.bashrc
-$ export PATH="/bbtools/ParamSpider:$PATH"
+$ export PATH="~/bbtools/ParamSpider:$PATH"
 $ source ~/.bashrc
 ```
 
