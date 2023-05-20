@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to the ParamSpider script
-PARAMSPIDER_PATH="bbtools/ParamSpider/paramspider.py"
+PARAMSPIDER_PATH="paramspider.py"
 
 # Path to the httprobe tool
 HTTPROBE_PATH="httprobe"
