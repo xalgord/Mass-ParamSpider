@@ -18,4 +18,4 @@ $ sudo cp paramspider.py /usr/local/bin/
 ```
 ./paramspider_script.sh domains.txt
 ```
-In the `domains.txt`, you can supply all the subdomains of a domain or the mutiple domains.
+In the `domains.txt`, you can supply all the subdomains of a domain or the mutiple domains. Filename should be `domains.txt`.
