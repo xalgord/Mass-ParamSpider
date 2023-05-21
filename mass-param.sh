@@ -17,9 +17,10 @@ OUTPUT_DIR="$HOME/output"
 COMBINED_OUTPUT_FILE="combined_output.txt"
 
 # Color codes
-GREEN='\033[0;32m'
-RED='\033[0;31m'
-YELLOW='\033[0;33m'
+GREEN='\033[1;32m'
+RED='\033[1;31m'
+YELLOW='\033[1;33m'
+BLUE='\033[1;34m'
 NC='\033[0m' # No Color
 
 # Function to run ParamSpider on a single domain
@@ -34,10 +35,10 @@ run_paramspider() {
 
   "$PARAMSPIDER_PATH" -d "$domain" --level high -o "$output_dir/output.txt"
   if [ -s "$output_dir/output.txt" ]; then
-    echo -e "ParamSpider completed for $domain.${NC}"
+    echo -e "${GREEN}ParamSpider completed for $domain.${NC}"
     echo -e "Output saved in: ${GREEN}$output_dir${NC}"
   else
-    echo -e "No output file generated for $domain.${NC}"
+    echo -e "${RED}No output file generated for $domain.${NC}"
   fi
 }
 
@@ -63,11 +64,15 @@ echo -e "${YELLOW}Running ParamSpider on live domains...${NC}"
 export -f run_paramspider  # Exporting the function for parallel execution
 while IFS= read -r domain; do
   ((current_progress++))
-  echo -e "\n${YELLOW}(Progress: $current_progress/$live_domains_count) Running ParamSpider on $domain...${NC}"
+  echo -e "\n${YELLOW}♦♦♦ Progress: $current_progress/$live_domains_count ♦♦♦${NC}"
+  echo -e "${YELLOW}Running ParamSpider on $domain...${NC}"
   run_paramspider "$domain"
 done < "$live_domains_file"
-echo -e "\n${GREEN}ParamSpider completed for all live domains.${NC}"
+echo -e "\n${GREEN}✔✔✔ ParamSpider completed for all live domains.${NC}"
 
 # Combine the individual domain outputs into a single file
 find "$OUTPUT_DIR" -name "output.txt" -exec cat {} + > "$COMBINED_OUTPUT_FILE"
 echo -e "${GREEN}Combined output saved in $COMBINED_OUTPUT_FILE${NC}"
+
+# Copyright notice
+echo -e "\n${BLUE}This script is written by XALGORD (https://github.com/xalgord)${NC}"
