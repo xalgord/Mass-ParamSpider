@@ -2,6 +2,12 @@
 
 # Mass-ParamSpider: Run ParamSpider tool on multiple domains or subdomains.
 
+## Requirements:
+```
+$ sudo apt install python3
+$ sudo apt-get install parallel
+```
+
 ## Installation:
 ```
 git clone https://github.com/xalgord/Mass-ParamSpider
