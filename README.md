@@ -19,7 +19,7 @@ cd Mass-ParamSpider
 sudo chmod +x mass-param.txt
 ```
 
-Note: `paramspider` should be added to the $PATH, for example:
+Note: [ParamSpider](https://github.com/devanshbatham/ParamSpider) should be installed in your system and added to the $PATH, for example:
 
 ```
 $ nano ~/.bashrc
