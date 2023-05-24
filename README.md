@@ -8,8 +8,8 @@
 
 ## Requirements:
 ```
-$ sudo apt install python3
-$ sudo apt-get install parallel
+sudo apt install python3
+sudo apt-get install parallel
 ```
 
 ## Installation:
@@ -22,9 +22,9 @@ sudo chmod +x mass-param.txt
 Note: [ParamSpider](https://github.com/devanshbatham/ParamSpider) should be installed in your system and added to the $PATH, for example:
 
 ```
-$ nano ~/.bashrc
-$ export PATH="~/bbtools/ParamSpider:$PATH"
-$ source ~/.bashrc
+nano ~/.bashrc
+export PATH="~/bbtools/ParamSpider:$PATH"
+source ~/.bashrc
 ```
 
 ## Usage:
