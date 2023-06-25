@@ -16,7 +16,7 @@ sudo apt-get install parallel
 ```
 git clone https://github.com/xalgord/Mass-ParamSpider
 cd Mass-ParamSpider
-sudo chmod +x mass-param.txt
+sudo chmod +x mass-param.sh
 ```
 
 Note: [ParamSpider](https://github.com/devanshbatham/ParamSpider) should be installed in your system and added to the $PATH, for example:
