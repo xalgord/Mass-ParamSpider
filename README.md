@@ -23,7 +23,7 @@ Note: [ParamSpider](https://github.com/devanshbatham/ParamSpider) should be inst
 
 ```
 nano ~/.bashrc
-export PATH="~/bbtools/ParamSpider:$PATH"
+export PATH="$PATH:$HOME/bbtools/ParamSpider/"
 source ~/.bashrc
 ```
 
