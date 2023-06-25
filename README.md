@@ -29,6 +29,6 @@ source ~/.bashrc
 
 ## Usage:
 ```
-./paramspider_script.sh domains.txt
+./mass-param.sh domains.txt
 ```
 In the `domains.txt`, you can supply all the subdomains of a domain or the mutiple domains.
