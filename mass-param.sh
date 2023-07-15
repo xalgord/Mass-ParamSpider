@@ -6,10 +6,6 @@ PARAMSPIDER_PATH="paramspider.py"
 # Input file containing the list of domains
 DOMAINS_FILE="$1"
 
-# Number of parallel jobs for curl and ParamSpider
-CURL_JOBS=50
-PARAMSPIDER_JOBS=10
-
 # Output directory for storing the individual domain results
 OUTPUT_DIR="$HOME/output"
 
@@ -51,24 +47,12 @@ fi
 # Create the output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
 
-# Read the domains file line by line and check if the domains are live using curl
-live_domains_file="${DOMAINS_FILE%.*}_live.txt"
-echo -e "${YELLOW}Checking live domains using curl...${NC}"
-cat "$DOMAINS_FILE" | parallel -j"$CURL_JOBS" --progress "curl -s -o /dev/null -w '%{http_code} {}\\n' {}" | awk '$1 >= 200 && $1 < 400 {print $2}' > "$live_domains_file"
-echo -e "${GREEN}Live domains saved in $live_domains_file${NC}"
-
-# Read the live domains file line by line and run ParamSpider for each domain in parallel
-live_domains_count=$(wc -l < "$live_domains_file")
-current_progress=0
-echo -e "${YELLOW}Running ParamSpider on live domains...${NC}"
-export -f run_paramspider  # Exporting the function for parallel execution
+# Read the domains file line by line and run ParamSpider for each domain
 while IFS= read -r domain; do
-  ((current_progress++))
-  echo -e "\n${YELLOW}♦♦♦ Progress: $current_progress/$live_domains_count ♦♦♦${NC}"
   echo -e "${YELLOW}Running ParamSpider on $domain...${NC}"
   run_paramspider "$domain"
-done < "$live_domains_file"
-echo -e "\n${GREEN}✔✔✔ ParamSpider completed for all live domains.${NC}"
+done < "$DOMAINS_FILE"
+echo -e "\n${GREEN}✔✔✔ ParamSpider completed for all domains.${NC}"
 
 # Combine the individual domain outputs into a single file
 find "$OUTPUT_DIR" -name "output.txt" -exec cat {} + > "$COMBINED_OUTPUT_FILE"
