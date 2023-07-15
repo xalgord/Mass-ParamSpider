@@ -42,7 +42,7 @@ run_paramspider() {
 if [ ! -f "$DOMAINS_FILE" ]; then
   echo -e "${RED}Domains file not found.${NC}"
   exit 1
-fi
+fi 
 
 # Create the output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
