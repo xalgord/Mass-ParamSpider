@@ -2,8 +2,8 @@
 
 ## Features:
 - Scrape all Parameters of multiple domains and subdomains in one shot.
-- Checks the dead domains using curl before executing the script.
-- Using parallel to make the process faster.
+- ~Checks the dead domains using curl before executing the script~.
+- ~Using parallel to make the process faster~.
 
 
 ## Requirements:
